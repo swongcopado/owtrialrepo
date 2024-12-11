@@ -4415,6 +4415,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>TrialTestObject__c.Custom_Field_A__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>TrialTestObject__c.Custom_Field_B__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>TrialTestObject__c.Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
