@@ -26,10 +26,7 @@
                 <behavior>Edit</behavior>
                 <field>Custom_Field_A__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Custom_Field_B__c</field>
-            </layoutItems>
+
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
