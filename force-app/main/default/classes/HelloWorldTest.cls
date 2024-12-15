@@ -3,7 +3,7 @@ public class HelloWorldTest {
     
     @isTest
     public static void testSayHello() {
-        String expected = 'Hello';
+        String expected = 'User 3 Updated This';
         String actual = HelloWorld.sayHello();
         System.assertEquals(actual,expected,'not the same');
     }
