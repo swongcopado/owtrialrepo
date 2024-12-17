@@ -56,4 +56,9 @@
         <default>false</default>
         <label>Other</label>
     </standardValue>
+    <standardValue>
+        <fullName>Email to Case</fullName>
+        <default>false</default>
+        <label>Email to Case</label>
+    </standardValue>
 </StandardValueSet>
