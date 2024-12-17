@@ -7,17 +7,17 @@ public class AcctOps {
         }
     }
        
-    public static Account setDefaultBillingAddress(Account a){ // Base Change
-        a.billingstreet = 'Basauri, 6'; 
-        a.billingstate = 'Madrid'; 
-        a.billingpostalcode ='28023'; 
+    public static Account setDefaultBillingAddress(Account a){ // Dev 1 Changed this
+        a.billingstreet = '15th Floor, Plaza One'; 
+        a.billingstate = 'Sydney'; 
+        a.billingpostalcode ='2000'; 
         return a;
     }
 
-    public static Account setDefaultShippingAddress(Account a){ // Base Change
-        a.shippingstreet = 'Basauri, 6'; 
-        a.shippingstate = 'Madrid';
-        a.shippingpostalcode ='28023';
+    public static Account setDefaultShippingAddress(Account a){ // Dev 1 Changed this
+        a.shippingstreet = '15th Floor, Plaza Two'; 
+        a.shippingstate = 'Melbourne';
+        a.shippingpostalcode ='3000';
         return a;
     }
     public static Account setDefaultPhone(Account a) { // Base Change
