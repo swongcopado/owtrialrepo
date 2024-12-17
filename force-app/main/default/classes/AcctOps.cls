@@ -7,10 +7,10 @@ public class AcctOps {
         }
     }
        
-    public static Account setDefaultBillingAddress(Account a){ // Dev 2 Changed This
-        a.billingstreet = 'Plaza 3'; 
-        a.billingstate = 'Manila'; 
-        a.billingpostalcode ='30200'; 
+    public static Account setDefaultBillingAddress(Account a){ // Dev 1 Changed this
+        a.billingstreet = '15th Floor, Plaza One'; 
+        a.billingstate = 'Sydney'; 
+        a.billingpostalcode ='2000'; 
         return a;
     }
 
