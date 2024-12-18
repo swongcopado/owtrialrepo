@@ -14,10 +14,10 @@ public class AcctOps {
         return a;
     }
 
-    public static Account setDefaultShippingAddress(Account a){ // Dev 1 Changed this
-        a.shippingstreet = '15th Floor, Plaza Two'; 
-        a.shippingstate = 'Melbourne';
-        a.shippingpostalcode ='3000';
+    public static Account setDefaultShippingAddress(Account a){ // Dev 2 Changed This
+        a.shippingstreet = 'Plaza 4'; 
+        a.shippingstate = 'Pune';
+        a.shippingpostalcode ='5333030';
         return a;
     }
     public static Account setDefaultPhone(Account a) { // Base Change
