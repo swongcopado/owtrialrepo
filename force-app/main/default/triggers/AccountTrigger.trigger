@@ -5,6 +5,10 @@ trigger AccountTrigger on Account (before insert) {
             // Remove 'BP' prefix
             a.BP_Number__c = a.BP_Number__c.replaceFirst('BP', '');
         }
+
+		if(a.Industry == 'Officeworks'){
+            a.Site = 'Melbourne';
+        }
         
     }
 }
