@@ -161,4 +161,9 @@
         <default>false</default>
         <label>Utilities</label>
     </standardValue>
+    <standardValue>
+        <fullName>Officeworks</fullName>
+        <default>false</default>
+        <label>Officeworks</label>
+    </standardValue>
 </StandardValueSet>
