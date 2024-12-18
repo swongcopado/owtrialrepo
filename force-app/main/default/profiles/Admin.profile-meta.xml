@@ -107,6 +107,10 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>AccountTriggerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>HelloWorld</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -128,6 +132,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.AnnualRevenue</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.BP_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
