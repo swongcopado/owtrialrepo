@@ -1,4 +1,3 @@
-// AccountTriggerTest.cls
 @isTest
 public class AccountTriggerTest {
 
@@ -12,8 +11,9 @@ public class AccountTriggerTest {
         // Insert the account
         insert account;
         
+        Account acc = [SELECT ID, SITE FROM ACCOUNT WHERE Name = 'Test Account' LIMIT 1 ];
         // Verify that the site is not set
-        System.assertEquals(null, account.site);
+        System.assertEquals(null, acc.site);
     }
 
     static testMethod void testAccountTrigger_Officeworks_site_Already_Set() {
@@ -27,8 +27,25 @@ public class AccountTriggerTest {
         // Insert the account
         insert account;
         
+        Account acc = [SELECT ID, SITE FROM ACCOUNT WHERE Name = 'Test Account' LIMIT 1 ];
         // Verify that the site is still set to 'Melbourne'
-        System.assertEquals('Melbourne', account.site);
+        System.assertEquals('Melbourne', acc.site);
+    }
+
+    
+    static testMethod void testAccountTrigger_Officeworks_site() {
+        // Create a new account with a valid name and site already set
+        Account account = new Account(
+            Name = 'Test Account',
+            Industry = 'Officeworks'
+        );
+        
+        // Insert the account
+        insert account;
+        
+        Account acc = [SELECT ID, SITE FROM ACCOUNT WHERE Name = 'Test Account' LIMIT 1 ];
+        // Verify that the site is still set to 'Melbourne'
+        System.assertEquals('Melbourne', acc.site);
     }
 
     
@@ -41,6 +58,8 @@ public class AccountTriggerTest {
         // Expect an exception to be thrown
         
             insert account;
-            System.assertEquals(null, account.site);
+        
+        Account acc = [SELECT ID, SITE FROM ACCOUNT WHERE Name = 'Test Account' LIMIT 1 ];
+        System.assertEquals(null, acc.site);
     }
 }
