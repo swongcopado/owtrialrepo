@@ -54,4 +54,67 @@ public class AccountTriggerTest {
         // Check if 'BP' prefix is not removed
         System.assertEquals(null, updatedAccount.BP_Number__c);
     }
+
+
+    static testMethod void testAccountTrigger_Officeworks_site_Not_Set() {
+        // Create a new account with a valid name but different industry
+        Account account = new Account(
+            Name = 'Test Account',
+            Industry = 'Retail'
+        );
+        
+        // Insert the account
+        insert account;
+        
+        Account acc = [SELECT ID, SITE FROM ACCOUNT WHERE Name = 'Test Account' LIMIT 1 ];
+        // Verify that the site is not set
+        System.assertEquals(null, acc.site);
+    }
+
+    static testMethod void testAccountTrigger_Officeworks_site_Already_Set() {
+        // Create a new account with a valid name and site already set
+        Account account = new Account(
+            Name = 'Test Account',
+            Industry = 'Officeworks',
+            site = 'Melbourne'
+        );
+        
+        // Insert the account
+        insert account;
+        
+        Account acc = [SELECT ID, SITE FROM ACCOUNT WHERE Name = 'Test Account' LIMIT 1 ];
+        // Verify that the site is still set to 'Melbourne'
+        System.assertEquals('Melbourne', acc.site);
+    }
+
+    
+    static testMethod void testAccountTrigger_Officeworks_site() {
+        // Create a new account with a valid name and site already set
+        Account account = new Account(
+            Name = 'Test Account',
+            Industry = 'Officeworks'
+        );
+        
+        // Insert the account
+        insert account;
+        
+        Account acc = [SELECT ID, SITE FROM ACCOUNT WHERE Name = 'Test Account' LIMIT 1 ];
+        // Verify that the site is still set to 'Melbourne'
+        System.assertEquals('Melbourne', acc.site);
+    }
+
+    
+    static testMethod void testAccountTrigger_Industry_Missing() {
+        // Create a new account without an industry
+        Account account = new Account(
+            Name = 'Test Account'
+        );
+        
+        // Expect an exception to be thrown
+        
+            insert account;
+        
+        Account acc = [SELECT ID, SITE FROM ACCOUNT WHERE Name = 'Test Account' LIMIT 1 ];
+        System.assertEquals(null, acc.site);
+    }
 }
