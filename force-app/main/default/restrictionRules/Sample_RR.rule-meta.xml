@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RestrictionRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <enforcementType>Restrict</enforcementType>
+    <masterLabel>Sample RR</masterLabel>
+    <recordFilter>OR(ISPICKVAL(Type__c,&apos;Road&apos;), ISPICKVAL(Type__c,&apos;Mountain&apos;), ISPICKVAL(Type__c,&apos;BMX&apos;))</recordFilter>
+    <targetEntity>Steven_Bicycle__c</targetEntity>
+    <userCriteria>$User.ProfileId=&apos;005QE0000020e17YAA&apos;</userCriteria>
+    <version>1</version>
+</RestrictionRule>
